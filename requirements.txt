@@ -1,9 +1,0 @@
-einops
-transformers
-peft
-omegaconf
-torch
-evaluate
-accelerate
-streamlit
-
