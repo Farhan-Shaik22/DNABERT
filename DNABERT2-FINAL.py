@@ -52,10 +52,11 @@ def main():
 
 def pred(sequence):
     encoded_input = tokenizer(sequence, return_tensors='pt')
-    
+
+    # Pass the encoded input through the model
     with torch.no_grad():
-        outputs = model(**encoded_input)
-        logits = outputs.logits
+        outputs = model(input_ids=encoded_input['input_ids'], attention_mask=encoded_input['attention_mask'])
+        logits = outputs[0]
         predicted_class = logits.argmax(-1).item()
         confidence = logits.softmax(dim=-1)[0, 1].item()
 
