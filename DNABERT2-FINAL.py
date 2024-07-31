@@ -13,6 +13,8 @@ tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
 
 
 model = AutoModelForSequenceClassification.from_pretrained(model_name, trust_remote_code=True, config=config)
+model.eval()  
+model = model.to('cpu')
 
 def main():
     st.title("Epigenetic Marks Prediction")
@@ -52,11 +54,13 @@ def main():
 
 def pred(sequence):
     encoded_input = tokenizer(sequence, return_tensors='pt')
-
-    # Pass the encoded input through the model
+    
+    device = next(model.parameters()).device
+    encoded_input = {k: v.to(device) for k, v in encoded_input.items()}
+    
     with torch.no_grad():
-        outputs = model(input_ids=encoded_input['input_ids'], attention_mask=encoded_input['attention_mask'])
-        logits = outputs[0]
+        outputs = model(**encoded_input)
+        logits = outputs.logits
         predicted_class = logits.argmax(-1).item()
         confidence = logits.softmax(dim=-1)[0, 1].item()
 
