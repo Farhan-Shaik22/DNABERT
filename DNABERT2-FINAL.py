@@ -2,8 +2,7 @@
 import streamlit as st
 from transformers import AutoTokenizer, AutoModelForSequenceClassification, BertConfig
 import torch
-import subprocess
-import sys
+
 
 model_name = "farhan-shaik/Fine-Tuned-DNABERT2-For-Epigenetic-Mark-Prediction"
 
@@ -17,7 +16,6 @@ tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True)
 model = AutoModelForSequenceClassification.from_pretrained(model_name, trust_remote_code=True, config=config)
 
 def main():
-    uninstall_package("Triton")
     st.title("Epigenetic Marks Prediction")
     st.write("An application of DNA BERT2")
 
@@ -64,15 +62,6 @@ def pred(sequence):
 
     return predicted_class, confidence
 
-def uninstall_package(package_name):
-    try:
-
-        subprocess.check_call([sys.executable, "-m", "pip", "install", "--upgrade", "pip"])
-
-        subprocess.check_call([sys.executable, "-m", "pip", "uninstall", "-y", package_name])
-        print(f"Package '{package_name}' has been uninstalled successfully.")
-    except subprocess.CalledProcessError as e:
-        print(f"An error occurred while uninstalling '{package_name}': {e}")
 
 if __name__ == "__main__":
     main()
