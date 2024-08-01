@@ -10,8 +10,6 @@ You can find the Fine-Tuned DNA BERT2 model on Hugging Face at the following URL
 For Testing use the data in the following URL:
 [Testing Data](https://docs.google.com/spreadsheets/d/1sdOJdD-N_XV-Xh7vJkK9EJ_paXYCWzzF/edit?usp=drive_link&ouid=115779110561581468310&rtpof=true&sd=true)
 
-**NOTE-**
-The above link will direct to a page click on visit site button on that page to get redirected to the application.
 
 ## Project Overview
 
