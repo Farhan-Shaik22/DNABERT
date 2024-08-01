@@ -7,6 +7,12 @@ This repository contains the official implementation of the Fine-Tuned DNA BERT2
 You can find the Fine-Tuned DNA BERT2 model on Hugging Face at the following URL:
 [Fine-Tuned DNA BERT2 Model for Epigenetic Mark Prediction](https://huggingface.co/farhan-shaik/Fine-Tuned-DNABERT2-For-Epigenetic-Mark-Prediction)
 
+You can find the live Demo website link in the following URL:
+[StreamLit App of Epigenetic Mark Prediction](https://4722-34-80-189-160.ngrok-free.app/)
+
+**NOTE**
+The above link will direct to a page click on visit site button on that page to get redirected to the application.
+
 ## Project Overview
 
 For a detailed explanation of the project, please refer to this [PowerPoint presentation](https://docs.google.com/presentation/d/1RiFGJW_lrbUEFNWD1sSUIiBYshqH4iru/edit?usp=sharing&ouid=115779110561581468310&rtpof=true&sd=true)
@@ -48,6 +54,10 @@ To set up and run the project, follow these steps:
 ## Troubleshooting
 
 - If you encounter any errors, try reloading the page in your browser.
+- If the issue persists uninstall Triton
+   ```bash
+     pip uninstall Triton
+   ```
 - If the issue persists, ensure that all dependencies are correctly installed and compatible with your Python version.
 
 ## Contact
