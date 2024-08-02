@@ -7,9 +7,13 @@ This repository contains the official implementation of the Fine-Tuned DNA BERT2
 You can find the Fine-Tuned DNA BERT2 model on Hugging Face at the following URL:
 [Fine-Tuned DNA BERT2 Model for Epigenetic Mark Prediction](https://huggingface.co/farhan-shaik/Fine-Tuned-DNABERT2-For-Epigenetic-Mark-Prediction)
 
+## Demo 
+
+you can try out the working of the streamlit app in the following URL:
+[Streamlit App for Epigenetic Mark Prediction](https://huggingface.co/spaces/farhan-shaik/StreamLit-App-for-Epigenetic-Mark-Prediction-using-DNABERT2)
+
 For Testing use the data in the following URL:
 [Testing Data](https://docs.google.com/spreadsheets/d/1sdOJdD-N_XV-Xh7vJkK9EJ_paXYCWzzF/edit?usp=drive_link&ouid=115779110561581468310&rtpof=true&sd=true)
-
 
 ## Project Overview
 
